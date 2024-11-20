@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+    <!-- Login Form -->
+    <form id="login-form">
+        <h3>Login Here</h3>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email" id="email" name="email" required>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" name="password" required>
+        <button id="loginButton" type="submit">Log In</button>
+        <div class="social">
+            <div class="go"><i class="fab fa-google"></i> Google</div>
+            <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+        </div>
+    </form>
+
+    <!-- Error message and registration link will be dynamically inserted here -->
+    <div id="error-message"></div>
+    <div id="registration-link"></div>
+
+    <script>
+        // Redirect to portfolio.html when login button is clicked
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form submission (page reload)
+
+            // Redirect to portfolio.html
+            window.location.href = 'portfolio.html'; 
+        });
+    </script>
+</body>
+</html>
